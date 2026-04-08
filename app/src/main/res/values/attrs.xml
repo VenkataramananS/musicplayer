@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NeuomorphicView">
+        <attr name="neuomorphic_shadow_elevation" format="dimension" />
+        <attr name="neuomorphic_corner_radius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Album Art -->
+        <FrameLayout
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:background="@drawable/album_art_neumorphic"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Song Info -->
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/song_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Artist Name"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Progress Bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/neumorphic_card"
+                android:thumb="@drawable/neumorphic_button" />
+
+        </FrameLayout>
+
+        <!-- Time Display -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/current_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/total_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Main Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/previous_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="12dp"
+                android:contentDescription="Previous" />
+
+            <ImageButton
+                android:id="@+id/play_button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_media_play"
+                android:background="@drawable/neumorphic_button"
+                android:backgroundTint="@color/accent"
+                android:scaleType="centerInside"
+                android:layout_margin="12dp"
+                android:contentDescription="Play" />
+
+            <ImageButton
+                android:id="@+id/pause_button"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_media_pause"
+                android:background="@drawable/neumorphic_button"
+                android:backgroundTint="@color/accent"
+                android:scaleType="centerInside"
+                android:layout_margin="12dp"
+                android:contentDescription="Pause" />
+
+            <ImageButton
+                android:id="@+id/next_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_media_next"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="12dp"
+                android:contentDescription="Next" />
+
+        </LinearLayout>
+
+        <!-- Secondary Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <ImageButton
+                android:id="@+id/shuffle_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:contentDescription="Shuffle" />
+
+            <ImageButton
+                android:id="@+id/repeat_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:contentDescription="Repeat" />
+
+            <ImageButton
+                android:id="@+id/favorite_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:contentDescription="Favorite" />
+
+            <ImageButton
+                android:id="@+id/sleep_timer_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                android:background="@drawable/neumorphic_button"
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:contentDescription="Sleep Timer" />
+
+        </LinearLayout>
+
+        <!-- Queue Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Queue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/queue_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+</ScrollView>
